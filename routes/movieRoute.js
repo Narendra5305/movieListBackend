@@ -7,7 +7,7 @@ const {Auth} = require("../middleware/auth")
 
 
 // for get all movies
-MovieRouter.get("/", Auth ,GetMovie);
+MovieRouter.get("/",GetMovie);
 
 // for get movie details
 MovieRouter.get("/:id", GetMovieDetail);

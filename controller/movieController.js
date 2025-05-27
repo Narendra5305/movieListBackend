@@ -7,7 +7,7 @@ const GetMovie =async(req,res) =>{
         const data = await MovieModel.find();
         res.status(200).json({"msg":"Movie data" ,data})
     } catch (error) {
-        res.status(400).json({"msg":"there has been an error on fetching product" ,error})
+        res.status(400).json({"msg":"there has been an error on fetching movie" ,error})
     }
 }
 

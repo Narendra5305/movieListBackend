@@ -3,9 +3,11 @@ const MovieRouter = express.Router()
 
 const { GetMovie, GetMovieDetail, AddMovie, UpdateMovie, DeleteMovie } = require("../controller/movieController");
 
+const {Auth} = require("../middleware/auth")
+
 
 // for get all movies
-MovieRouter.get("/", GetMovie);
+MovieRouter.get("/", Auth ,GetMovie);
 
 // for get movie details
 MovieRouter.get("/:id", GetMovieDetail);
